@@ -1,0 +1,94 @@
+hypothese('gintama')    :- gintama, !.
+hypothese('neighborTotoro')    :- neighborTotoro, !.
+hypothese('perfectBlue')    :- perfectBlue, !.
+hypothese('paprika')    :- paprika, !.
+hypothese('attackonTitan')    :- attackonTitan, !.
+hypothese('demonSlayer')    :- demonSlayer, !.
+hypothese('silentVoice')    :- silentVoice, !.
+hypothese('souvenirDeMarnie')    :- souvenirMarnie, !.
+hypothese('voyageChihiro')    :- voyageChihiro, !.
+hypothese('bubble')    :- bubble , !.
+hypothese('chateauAmbulant')    :- chateauAmbulant, !.
+hypothese('arrietty')    :- arrietty, !.
+hypothese('rien')    :- rien, !.
+
+gintama :- comedie,action,aventure,longMovie.
+gintama :- comedie,action,longMovie.
+gintama :- comedie,aventure,longMovie.
+gintama :- action,aventure,longMovie.
+gintama :- comedie,longMovie.
+gintama :- action,longMovie.
+gintama :- aventure,longMovie.
+
+neighborTotoro :- comedie,fantasy.
+neighborTotoro :- comedie.
+neighborTotoro :- fantasy.
+
+perfectBlue:-horreur.
+paprika :- horreur,sf,longMovie.
+paprika :- horreur,longMovie.
+paprika :- sf,longMovie.
+
+attackonTitan:- action,drama,horreur,longMovie.
+attackonTitan:- drama,horreur,longMovie.
+attackonTitan:- action,drama,longMovie.
+attackonTitan:- action,horreur,longMovie.
+attackonTitan:- drama,longMovie.
+attackonTitan:- horreur,longMovie.
+attackonTitan:- action,longMovie.
+demonSlayer:- action,aventure.
+demonSlayer:- action.
+demonSlayer:- aventure.
+
+silentVoice :- drama,romance,longMovie,bonneHummeur.
+silentVoice :- drama,longMovie,bonneHummeur.
+silentVoice :- romance,longMovie,bonneHummeur.
+souvenirMarnie :-  drama,power,secret,bonneHummeur.
+souvenirMarnie :-  drama,power,bonneHummeur.
+souvenirMarnie :-  drama,secret,bonneHummeur.
+souvenirMarnie :-  power,secret,bonneHummeur.
+souvenirMarnie :-  drama,bonneHummeur.
+souvenirMarnie :-  power,bonneHummeur.
+souvenirMarnie :-  secret,bonneHummeur.
+
+voyageChihiro :- aventure,spectaculaire,longMovie,bonneHummeur.
+voyageChihiro :- aventure,longMovie,bonneHummeur.
+voyageChihiro :- spectaculaire,longMovie,bonneHummeur.
+
+bubble :- aventure,romance,spectaculaire,bonneHummeur.
+bubble :- aventure,spectaculaire,bonneHummeur.
+bubble :- romance,spectaculaire,bonneHummeur.
+bubble :- aventure,romance,bonneHummeur.
+bubble :- aventure,bonneHummeur.
+bubble :- romance,bonneHummeur.
+bubble :- spectaculaire,bonneHummeur.
+
+chateauAmbulant :- magic,spectaculaire,bonneHummeur,longMovie.
+chateauAmbulant :- magic,bonneHummeur,longMovie.
+chateauAmbulant :- spectaculaire,bonneHummeur,longMovie.
+
+arrietty :- magic,romance,bonneHummeur .
+arrietty :- magic,bonneHummeur .
+arrietty :- romance,bonneHummeur .
+
+rien:-suggere,longMovie,bonneHummeur.
+rien:-suggere,bonneHummeur.
+
+secret                  :- verifier('Est-ce que vous aimez les films Secrets ?').
+power                  :- verifier('Est-ce que vous aimez les films Power ?').
+magic                 :- verifier('Est-ce que vous aimez les films Magiques ?').
+spectaculaire                  :- verifier('Est-ce que vous aimez les films Spectaculaires ?').
+comedie                  :- verifier('Est-ce que vous aimez les films Comediens ?').
+aventure                  :- verifier('Est-ce que vous aimez les films d Aventures ?').
+drama                  :- verifier('Est-ce que vous aimez les films Dramatiques ?').
+action                  :- verifier('Est-ce que vous aimez les films d Action ?').
+horreur                :- verifier('Est-ce que vous aimez les films d Horreur ?').
+fantasy                  :- verifier('Est-ce que vous aimez les films de Fantaisie ?').
+sf                  :- verifier('Est-ce que vous aimez les films de Fictions ?').
+romance                  :- verifier('Est-ce que vous aimez les films Romantiques ?').
+longMovie                  :- verifier('Est-ce que vous aimez les films de long duree (1h 15min +) ?').
+bonneHummeur                 :- verifier('Est-ce que vous etes en bon humeur ?').
+suggere                 :- verifier('Est-ce que vous voulez qu on vous suggere un film ?').
+
+
+
